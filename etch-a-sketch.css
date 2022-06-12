@@ -1,61 +1,75 @@
 @import url('https://fonts.googleapis.com/css2?family=Chango&display=swap');
 
 * {
-    font-family: 'Chango';
-    --size-portrait: 75vw;
-    --size-landscape: 75vh;
+  font-family: 'Chango';
+  --size-portrait: 75vw;
+  --size-landscape: 75vh;
 }
 
 body {
-    background-color: red;
-    color: whitesmoke;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  background-color: red;
+  color: whitesmoke;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #controls {
-    padding-top: 32px;
+  padding-top: 32px;
 }
 button {
-    padding: 5px 32px;
-    border-radius: 5px;
+  padding: 5px 32px;
+  border-radius: 5px;
 }
 
 /* Etch-a-Sketch */
 #etchasketch {
-    background-color: gray;
-    padding: 20px;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    width: auto;
+  background-color: gray;
+  padding: 20px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: auto;
 }
 .etch-row {
-    display: flex;
-    height: auto;
-    flex: 1;
+  display: flex;
+  height: auto;
+  flex: 1;
 }
 .etch-cell {
-    background-color: aliceblue;
-    width: 100%;
+  background-color: aliceblue;
+  width: 100%;
 }
 .marked {
-    background-color: black;
+  /* background-color: black; */
 }
 @media (orientation: landscape) {
-    #etchasketch {
-        height: var(--size-landscape);
-    }
-    .etch-row {
-        width: var(--size-landscape);
-    }
+  #etchasketch {
+      height: var(--size-landscape);
+  }
+  .etch-row {
+      width: var(--size-landscape);
+  }
 }
 @media (orientation: portrait) {
-    #etchasketch {
-        height: var(--size-portrait);
-    }
-    .etch-row {
-        width: var(--size-portrait);
-    }
+  #etchasketch {
+      height: var(--size-portrait);
+  }
+  .etch-row {
+      width: var(--size-portrait);
+  }
+}
+
+.mode0 {
+
+}
+.mode1 {
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 5px black;
+  background: linear-gradient(90deg, rgb(100,100,100) 0%, rgb(255,255,255) 100%);
+}
+.mode2 {
+  color: white;
+  text-shadow: 0 0 10px black, 0 0 5px black;
+  background: linear-gradient(90deg, red 0%, orange 20%, yellow 40%, green 60%, blue 80%, violet 100%);
 }
