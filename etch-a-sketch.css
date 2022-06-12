@@ -24,12 +24,10 @@ button {
 #etchasketch {
     display: flex;
     flex-direction: column;
-    height: 80vw;
     width: auto;
 }
 .etch-row {
     display: flex;
-    width: 80vw;
     height: auto;
     flex: 1;
 }
@@ -39,4 +37,20 @@ button {
 }
 .marked {
     background-color: black;
+}
+@media (orientation: landscape) {
+    #etchasketch {
+        height: 80vh;
+    }
+    .etch-row {
+        width: 80vh;
+    }
+}
+@media (orientation: portrait) {
+    #etchasketch {
+        height: 80vw;
+    }
+    .etch-row {
+        width: 80vw;
+    }
 }
