@@ -2,6 +2,8 @@
 
 * {
     font-family: 'Chango';
+    --size-portrait: 75vw;
+    --size-landscape: 75vh;
 }
 
 body {
@@ -22,6 +24,9 @@ button {
 
 /* Etch-a-Sketch */
 #etchasketch {
+    background-color: gray;
+    padding: 20px;
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     width: auto;
@@ -40,17 +45,17 @@ button {
 }
 @media (orientation: landscape) {
     #etchasketch {
-        height: 80vh;
+        height: var(--size-landscape);
     }
     .etch-row {
-        width: 80vh;
+        width: var(--size-landscape);
     }
 }
 @media (orientation: portrait) {
     #etchasketch {
-        height: 80vw;
+        height: var(--size-portrait);
     }
     .etch-row {
-        width: 80vw;
+        width: var(--size-portrait);
     }
 }
