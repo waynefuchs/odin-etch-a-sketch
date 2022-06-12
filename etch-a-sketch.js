@@ -8,8 +8,12 @@ document.addEventListener("mouseup", setMouseStatus);
 document.addEventListener("mousemove", setMouseStatus);
 
 /* Controls */
+// Resize
 const resizeButton = document.querySelector("#resize");
 resizeButton.addEventListener('click', setNewGridSize);
+// Reset (ShakeIt)
+const resetButton = document.querySelector("#reset");
+resetButton.addEventListener('click', clearGrid);
 
 /* MAIN */
 createGrid(GRID_SIZE);
@@ -74,4 +78,9 @@ function removeAllChildren(element)
     if(!element) return;
     while(element.firstChild)
         element.removeChild(element.firstChild);
+}
+
+function clearGrid()
+{
+    createGrid(GRID_SIZE);
 }
