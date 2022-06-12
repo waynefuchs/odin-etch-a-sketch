@@ -28,7 +28,7 @@ createGrid(GRID_SIZE);
 /* FUNCTIONS */
 function setNewGridSize(e)
 {
-	const userInput = prompt("Enter New Grid Size");
+	const userInput = prompt("Enter New Grid Size (16-100):");
 	const numericUserInput = Number(userInput);
 	if(!numericUserInput) 
 	{
